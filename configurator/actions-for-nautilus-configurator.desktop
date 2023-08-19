@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Actions For Nautilus Configurator
-Exec=$LOC/actions-for-nautilus-configurator/start-configurator.sh
-Path=$LOC/actions-for-nautilus-configurator
-Terminal=false
-Version=1.0
-Type=Application
-Icon=$LOC/actions-for-nautilus-configurator/images/sub-menu.png
-
