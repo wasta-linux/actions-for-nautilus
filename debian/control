@@ -2,7 +2,7 @@ Source: wasta-nautilus-actions
 Maintainer: Nate Marti <nate_marti@sil.org>
 Section: gnome
 Priority: optional
-Build-Depends: debhelper (>= 13.0.0)
+Build-Depends: debhelper (>= 12.0.0)
 Standards-Version: 4.6.2
 
 Package: actions-for-nautilus
