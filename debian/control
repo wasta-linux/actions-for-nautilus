@@ -1,3 +1,9 @@
+Source: wasta-nautilus-actions
+Maintainer: Nate Marti <nate_marti@sil.org>
+Section: gnome
+Priority: optional
+Standards-Version: 4.6.2
+
 Package: actions-for-nautilus
 Version: $VERSION
 Maintainer: Martin Bartlett <martin.j.bartlett@gmail.com>
