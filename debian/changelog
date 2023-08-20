@@ -1,3 +1,9 @@
+actions-for-nautilus (1.6.1ubuntu1) stable; urgency=medium
+
+  * Update for LP build.
+
+ -- Nate Marti <nate_marti@sil.org>  Sun, 20 Aug 2023 15:10:32 +0100
+
 actions-for-nautilus (1.6.1) stable; urgency=high
   * Fix config server being open on all interfaces
   * Fix config server not being closed by FF tab close
