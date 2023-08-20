@@ -1,6 +1,6 @@
 SHELL=/bin/bash
 nautilus_path=`which nautilus`
-GLOBALLOC=/usr/share
+GLOBALLOC=$(DESTDIR)/usr/share
 LOCALLOC=~/.local/share
 VERSION=1.6.1
 
