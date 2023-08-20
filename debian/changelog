@@ -1,3 +1,9 @@
+actions-for-nautilus (1.6.1.6) stable; urgency=medium
+
+  * Add python3 to build depends.
+
+ -- Nate Marti <nate_marti@sil.org>  Sun, 20 Aug 2023 18:01:19 +0100
+
 actions-for-nautilus (1.6.1.5) stable; urgency=medium
 
   * Skip dh_auto_build.
