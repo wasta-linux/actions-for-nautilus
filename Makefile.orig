@@ -4,7 +4,7 @@ GLOBALLOC=/usr/share
 LOCALLOC=~/.local/share
 VERSION=1.6.1
 
-user_install:
+install:
 	mkdir -p $(LOCALLOC)/nautilus-python/extensions/actions-for-nautilus
 	mkdir -p $(LOCALLOC)/actions-for-nautilus-configurator
 	mkdir -p $(LOCALLOC)/applications
@@ -26,11 +26,11 @@ uninstall:
 	@${nautilus_path} -q||true # This is due to nautilus -q always returning 255 status which causes makefile to think it failed
 	@echo 'You may have to restart the gnome shell in order to no longer see the configuration application'
 
-install:
-#ifneq ($(shell id -u), 0)
-#	@echo "You must be root to perform this action."
-#	exit 1
-#else
+install_global:
+ifneq ($(shell id -u), 0)
+	@echo "You must be root to perform this action."
+	exit 1
+else
 	mkdir -p $(GLOBALLOC)/nautilus-python
 	mkdir -p $(GLOBALLOC)/actions-for-nautilus-configurator
 	mkdir -p $(GLOBALLOC)/applications
@@ -41,7 +41,7 @@ install:
 		> $(GLOBALLOC)/applications/actions-for-nautilus-configurator.desktop
 	@echo 'You must now restart nautilus by running the command "nautilus -q"'
 	@echo 'You may also have to restart the gnome shell in order to see the configuration application'
-# endif
+endif
 
 uninstall_global:
 ifneq ($(shell id -u), 0)
