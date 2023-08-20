@@ -11,3 +11,6 @@
 
 %:
 	dh $@
+
+# Skip build step b/c no compilation needed.
+override_dh_auto_build:

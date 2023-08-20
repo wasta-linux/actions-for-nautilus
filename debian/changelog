@@ -1,3 +1,9 @@
+actions-for-nautilus (1.6.1.5) stable; urgency=medium
+
+  * Skip dh_auto_build.
+
+ -- Nate Marti <nate_marti@sil.org>  Sun, 20 Aug 2023 17:50:32 +0100
+
 actions-for-nautilus (1.6.1.4) stable; urgency=medium
 
   * Prepend DESTDIR to Makefile install location.
