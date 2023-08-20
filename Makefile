@@ -4,27 +4,27 @@ GLOBALLOC=/usr/share
 LOCALLOC=~/.local/share
 VERSION=1.6.1
 
-user_install:
-	mkdir -p $(LOCALLOC)/nautilus-python/extensions/actions-for-nautilus
-	mkdir -p $(LOCALLOC)/actions-for-nautilus-configurator
-	mkdir -p $(LOCALLOC)/applications
-	cp -a extensions $(LOCALLOC)/nautilus-python
-	cp -a configurator/* $(LOCALLOC)/actions-for-nautilus-configurator
-	LOC=$(LOCALLOC) python3 -c 'import os,sys; sys.stdout.write(os.path.expandvars(sys.stdin.read()))' \
-		< $(LOCALLOC)/actions-for-nautilus-configurator/actions-for-nautilus-configurator.desktop \
-		> $(LOCALLOC)/applications/actions-for-nautilus-configurator.desktop
-	@echo 'Restarting nautilus'
-	@${nautilus_path} -q||true # This is due to nautilus -q always returning 255 status which causes makefile to think it failed
-	@echo 'You may have to restart the gnome shell in order to see the configuration application'
+# user_install:
+# 	mkdir -p $(LOCALLOC)/nautilus-python/extensions/actions-for-nautilus
+# 	mkdir -p $(LOCALLOC)/actions-for-nautilus-configurator
+# 	mkdir -p $(LOCALLOC)/applications
+# 	cp -a extensions $(LOCALLOC)/nautilus-python
+# 	cp -a configurator/* $(LOCALLOC)/actions-for-nautilus-configurator
+# 	LOC=$(LOCALLOC) python3 -c 'import os,sys; sys.stdout.write(os.path.expandvars(sys.stdin.read()))' \
+# 		< $(LOCALLOC)/actions-for-nautilus-configurator/actions-for-nautilus-configurator.desktop \
+# 		> $(LOCALLOC)/applications/actions-for-nautilus-configurator.desktop
+# 	@echo 'Restarting nautilus'
+# 	@${nautilus_path} -q||true # This is due to nautilus -q always returning 255 status which causes makefile to think it failed
+# 	@echo 'You may have to restart the gnome shell in order to see the configuration application'
 
-uninstall:
-	rm -rf $(LOCALLOC)/nautilus-python/extensions/actions-for-nautilus
-	rm -f $(LOCALLOC)/nautilus-python/extensions/actions-for-nautilus.py
-	rm -rf $(LOCALLOC)/actions-for-nautilus-configurator
-	rm -f $(LOCALLOC)/applications/actions-for-nautilus-configurator.desktop
-	@echo 'Restarting nautilus'
-	@${nautilus_path} -q||true # This is due to nautilus -q always returning 255 status which causes makefile to think it failed
-	@echo 'You may have to restart the gnome shell in order to no longer see the configuration application'
+# uninstall:
+# 	rm -rf $(LOCALLOC)/nautilus-python/extensions/actions-for-nautilus
+# 	rm -f $(LOCALLOC)/nautilus-python/extensions/actions-for-nautilus.py
+# 	rm -rf $(LOCALLOC)/actions-for-nautilus-configurator
+# 	rm -f $(LOCALLOC)/applications/actions-for-nautilus-configurator.desktop
+# 	@echo 'Restarting nautilus'
+# 	@${nautilus_path} -q||true # This is due to nautilus -q always returning 255 status which causes makefile to think it failed
+# 	@echo 'You may have to restart the gnome shell in order to no longer see the configuration application'
 
 install:
 #ifneq ($(shell id -u), 0)
