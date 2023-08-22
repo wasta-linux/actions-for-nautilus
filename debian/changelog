@@ -1,3 +1,9 @@
+actions-for-nautilus (1.6.1.7) stable; urgency=medium
+
+  * Change package name to match LP source name.
+
+ -- Nate Marti <nate_marti@sil.org>  Tue, 22 Aug 2023 11:27:28 +0100
+
 actions-for-nautilus (1.6.1.6) stable; urgency=medium
 
   * Add python3 to build depends.
