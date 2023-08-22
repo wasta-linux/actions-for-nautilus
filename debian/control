@@ -5,7 +5,7 @@ Priority: optional
 Build-Depends: debhelper-compat (= 12), python3-minimal
 Standards-Version: 4.6.2
 
-Package: actions-for-nautilus
+Package: wasta-nautilus-actions
 Architecture: all
 Section: gnome
 Priority: optional
