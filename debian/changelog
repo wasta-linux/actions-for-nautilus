@@ -1,3 +1,9 @@
+actions-for-nautilus (1.6.1.8) stable; urgency=medium
+
+  * Prepend /usr/share as install location in desktop file.
+
+ -- Nate Marti <nate_marti@sil.org>  Thu, 14 Sep 2023 16:44:36 +0100
+
 actions-for-nautilus (1.6.1.7) stable; urgency=medium
 
   * Change package name to match LP source name.
