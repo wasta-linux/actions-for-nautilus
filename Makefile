@@ -36,9 +36,9 @@ install:
 	mkdir -p $(GLOBALLOC)/applications
 	cp -a extensions $(GLOBALLOC)/nautilus-python
 	cp -a configurator/* $(GLOBALLOC)/actions-for-nautilus-configurator
-	LOC=$(GLOBALLOC) python3 -c 'import os,sys; sys.stdout.write(os.path.expandvars(sys.stdin.read()))' \
-		< /usr/share/actions-for-nautilus-configurator/actions-for-nautilus-configurator.desktop \
-		> /usr/share/applications/actions-for-nautilus-configurator.desktop
+	LOC=/usr/share python3 -c 'import os,sys; sys.stdout.write(os.path.expandvars(sys.stdin.read()))' \
+		< $(GLOBALLOC)/actions-for-nautilus-configurator/actions-for-nautilus-configurator.desktop \
+		> $(GLOBALLOC)/applications/actions-for-nautilus-configurator.desktop
 	@echo 'You must now restart nautilus by running the command "nautilus -q"'
 	@echo 'You may also have to restart the gnome shell in order to see the configuration application'
 # endif
